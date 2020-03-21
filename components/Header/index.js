@@ -21,7 +21,7 @@ function headerCreate(){
 
 const headContain = document.querySelector(".header-container")
 headContain.appendChild(headerCreate())
-console.log(headContain)
+// console.log(headContain)
 // console.log(headerCreate())
 
 //  <div class="header">
