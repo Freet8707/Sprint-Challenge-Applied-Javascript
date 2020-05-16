@@ -23,7 +23,7 @@ function TabCreator(topic) {
 
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
     .then(response => {
-        console.log(response)
+        // console.log(response)
         response.data.topics.forEach(element => {
             return TabCreator(element)
         })
