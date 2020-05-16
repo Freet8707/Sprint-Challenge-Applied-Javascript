@@ -8,5 +8,29 @@
 //    <span class="temp">98°</span>
 //  </div >
 // And add it to the DOM in the .header-container component
+const headerContainer = document.querySelector(".header-container")
 
-function Header() {}
+function Header(date, title, temp) {
+    console.log("header component")
+    const header = document.createElement("div")
+    const dateSpan = document.createElement("span")
+    const titleH1 = document.createElement("h1")
+    const temperature = document.createElement("span")
+
+    header.appendChild(dateSpan)
+    header.appendChild(titleH1)
+    header.appendChild(temperature)
+
+    dateSpan.textContent = date 
+    titleH1.textContent = title
+    temperature.textContent = temp
+
+    header.classList.add("header")
+    temperature.classList.add("temp")
+
+    headerContainer.appendChild(header)
+
+    return
+}
+
+Header("May 15, 2020", "Lambda Times", "98°")
